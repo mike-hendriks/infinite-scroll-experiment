@@ -37,10 +37,16 @@ function Pages() {
   const { width, height } = useThree((state) => state.viewport)
   return (
     <>
+      {/* 
+        Explanation:
+        There are essentially 3 pages, each with 3 images.
+        The other pages are just clones of the first and last pages, 
+        but with a different offset so it overlaps when the page jumps back to the top or bottom.
+      */}
       <Page position={[0, 9, 0]} urls={['/img4.jpg', '/img5.jpg', '/img6.jpg']} />
-      <Page position={[-0, 0, 0]} urls={['/trip1.jpg', '/trip2.jpg', '/trip3.jpg']} />
-      <Page position={[0, -6, 0]} urls={['/img1.jpg', '/img2.jpg', '/img3.jpg']} />
-      <Page position={[0, -14, 0]} urls={['/img4.jpg', '/img5.jpg', '/img6.jpg']} />
+      <Page position={[-0, 0, 0]} urls={['/trip1.jpg', '/trip2.jpg', '/trip3.jpg']} /> {/* page 1 */}
+      <Page position={[0, -6, 0]} urls={['/img1.jpg', '/img2.jpg', '/img3.jpg']} /> {/* page 2 */}
+      <Page position={[0, -14, 0]} urls={['/img4.jpg', '/img5.jpg', '/img6.jpg']} /> {/* page 3 */}
       <Page position={[0, -23, 0]} urls={['/trip1.jpg', '/trip2.jpg', '/trip3.jpg']} />
       <Page position={[0, -29, 0]} urls={['/img1.jpg', '/img2.jpg', '/img3.jpg']} />
     </>
