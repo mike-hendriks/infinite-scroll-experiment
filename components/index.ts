@@ -1,0 +1,1 @@
+export default { ScrollControls } from './ScrollControls/ScrollControls';
