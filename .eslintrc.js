@@ -1,0 +1,61 @@
+module.exports = {
+  root: true,
+  extends: ['wesbos/typescript'],
+  globals: {
+    wp: true,
+  },
+  settings: {
+    'import/core-modules': [],
+    'import/ignore': [
+      'node_modules',
+      'vendor',
+      '\\.(coffee|scss|css|less|hbs|svg|json)$',
+    ],
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@/siteconfig', './site.config.ts'],
+          ['@/components', './components'],
+          ['@/partials', './partials'],
+          ['@/pages', './pages'],
+          ['@/hooks', './hooks'],
+          ['@/context', './context'],
+          ['@/lib', './lib'],
+          ['@/types', './types'],
+          ['@/helpers', './helpers'],
+          ['@/styles', './styles'],
+          ['@/messages', './messages'],
+          ['@/icons', './components/Icons'],
+        ],
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+      },
+    },
+  },
+  ignorePatterns: ['gists/*', 'vendor/*', 'node_modules/*', '.next/*', 'out/*'],
+  rules: {
+    'no-console': 0,
+    'no-unsafe-assignment': 0,
+    'react/jsx-no-useless-fragment': 0,
+    '@typescript-eslint/no-unsafe-member-access': 0,
+    'no-throw-literal': 0,
+    'rule-empty-line-before': 0,
+    '@typescript-eslint/no-unsafe-return': 0,
+    '@typescript-eslint/no-unsafe-member-access': 0,
+    '@typescript-eslint/no-throw-literal': 0,
+    '@typescript-eslint/restrict-template-expressions': 0,
+    '@typescript-eslint/no-unsafe-call': 0,
+    '@typescript-eslint/no-unsafe-assignment': 0,
+    'declaration-color-newline-after': 0,
+    'import/no-extraneous-dependencies': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
+    'prettier/prettier': [
+      'error',
+      {
+        trailingComma: 'es5',
+        singleQuote: true,
+        printWidth: 120,
+      },
+    ],
+  },
+};
